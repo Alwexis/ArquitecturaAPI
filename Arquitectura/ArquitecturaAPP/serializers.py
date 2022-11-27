@@ -40,3 +40,8 @@ class PagoSrlz(serializers.ModelSerializer):
     class Meta:
         model = Pago
         fields = '__all__'
+
+class ValoracionSrlz(serializers.ModelSerializer):
+    class Meta:
+        model = Valoracion
+        fields = '__all__'

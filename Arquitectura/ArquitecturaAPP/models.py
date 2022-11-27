@@ -27,18 +27,18 @@ class Plataforma(models.Model):
 
 class Agenda(models.Model):
     id = models.BigAutoField(primary_key=True)
-    fechaHoraInicio = models.DateField()
-    fechaHoraTermino = models.DateField()
+    fechaHoraInicio = models.DateTimeField()
+    fechaHoraTermino = models.DateTimeField()
     asignatura = models.ForeignKey(Asignatura, on_delete=models.PROTECT) #? Clave Foranea
     profesor = models.ForeignKey(Profesor, on_delete=models.PROTECT) #? Clave Foranea
     estado = models.IntegerField()
-    agendaAnterior = models.ForeignKey("self", on_delete=models.PROTECT) #? Clave Foranea
+    agendaAnterior = models.ForeignKey("self", on_delete=models.PROTECT, null=True) #? Clave Foranea
     link = models.TextField(max_length=256)
     plataforma = models.ForeignKey(Plataforma, on_delete=models.PROTECT) #? Clave Foranea
 
 class Asistencia(models.Model):
     id = models.BigAutoField(primary_key=True)
-    descripcion = models.TextField(max_length=256)
+    descripcion = models.TextField(max_length=256, null=True)
     fechaCreacion = models.DateField()
     estado = models.IntegerField()
     agenda = models.ForeignKey(Agenda, on_delete=models.PROTECT) #? Clave Foranea
@@ -59,3 +59,12 @@ class Pago(models.Model):
     monto = models.IntegerField()
     estado = models.IntegerField()
     comision = models.IntegerField()
+
+class Valoracion(models.Model):
+    id = models.BigAutoField(primary_key=True)
+    descripcion = models.TextField(max_length=256, null=True)
+    fechaCreacion = models.DateField()
+    nota = models.IntegerField()
+    estado = models.IntegerField()
+    agenda = models.ForeignKey(Agenda, on_delete=models.PROTECT) #? Clave Foranea
+    alumno = models.ForeignKey(Alumno, on_delete=models.PROTECT) #? Clave Foranea
