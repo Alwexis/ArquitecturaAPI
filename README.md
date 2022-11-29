@@ -1,7 +1,9 @@
 # <samp>ArquitecturaAPI</samp>
-Primero que nada, **importar datos** a PostgreSQL. Los datos están en la carpeta **PostgreSQL Data**. La versión que estamos utilizando es la 15.
+Librerías de Python a instalar: `pip install django django-rest-framework psycopg2`
 
-Librerías de Python a instalar: `pip install django django-rest-framework`
+Después de instalar todo, por favor ejecutar el comando `python manage.py makemigrations` y `python manage.py migrate`.
+
+Luego de aquello, **importar datos** a PostgreSQL. Los datos están en la carpeta **PostgreSQL Data**. La versión que estamos utilizando es la **15**.
 
 ----
 
