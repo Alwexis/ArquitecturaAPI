@@ -1,5 +1,5 @@
 # <samp>ArquitecturaAPI</samp>
-Librerías de Python a instalar: `pip install django django-rest-framework`
+Librerías de Python a instalar: `pip install django django-rest-framework psycopg2`
 
 Después de instalar todo, por favor ejecutar el comando `python manage.py makemigrations` y `python manage.py migrate`.
 
