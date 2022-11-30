@@ -29,8 +29,8 @@ Luego de aquello, **importar datos** a PostgreSQL. Los datos están en la carpet
 
 | Parámetro    |                      Descripción                      | Tipo de Dato |
 | :----------- | :---------------------------------------------------: | -----------: |
-| fechaInicio  |          Fecha y Hora de inicio de la Clase           |     datetime |
-| fechaTermino |       Fecha y Hora de finalización de la Clase.       |     datetime |
+| fechaInicio  |          Fecha y Hora de inicio de la Clase **`(YYYY-mm-dd HH:MM:ss)`** |     datetime |
+| fechaTermino |       Fecha y Hora de finalización de la Clase **`(YYYY-mm-dd HH:MM:ss)`**       |     datetime |
 | asignatura   |     ID de la Asignatura la cual tratará la Clase.     |          int |
 | profesor     |   RUT del Profesor encargado de realizar la Clase.    |          int |
 | link         |                 Link/URL de la Clase.                 |       string |
